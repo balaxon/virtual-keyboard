@@ -46,7 +46,7 @@ html.onkeydown=function handle(e) {
 }
 html.onkeyup=function handle(e) {
     addanim(e.key);
-    setTimeout(clearanim,1100);
+    /* setTimeout(clearanim,1100); */
     
     console.log(e.key);
     if(e.key == 'Shift'&& lang =='en'){
