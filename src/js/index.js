@@ -46,7 +46,7 @@ html.onkeydown=function handle(e) {
 }
 html.onkeyup=function handle(e) {
     addanim(e.key);
-    /* setTimeout(clearanim,1100); */
+    clearanim(e.key);
     
     console.log(e.key);
     if(e.key == 'Shift'&& lang =='en'){
@@ -237,12 +237,35 @@ function runOnKeys(func, ...codes) {
     function clearanim(str){
         for(let j=0;j<bigcapsru.length;j++){
             for(let i=0;i<bigcapsru[j].length;i++){
-                if(str==divkeyboard.childNodes[j].childNodes[i].textContent){divkeyboard.childNodes[j].childNodes[i].style.animation = 'none'; divkeyboard.childNodes[j].childNodes[i].style.background = 'black';}
+                if(str==divkeyboard.childNodes[j].childNodes[i].textContent){
+                    setTimeout(() => {
+                        divkeyboard.childNodes[j].childNodes[i].style.animation = ""; divkeyboard.childNodes[j].childNodes[i].style.background = 'black';
+                    }, 1000); }
         }}
-        if(str=='ArrowUp'){divkeyboard.childNodes[3].childNodes[11].style.animation = 'none'; divkeyboard.childNodes[3].childNodes[11].style.background = 'black';}
-        if(str=='ArrowLeft'){divkeyboard.childNodes[4].childNodes[6].style.animation = ""; divkeyboard.childNodes[4].childNodes[6].style.background = 'black';}
-        if(str=='ArrowDown'){divkeyboard.childNodes[4].childNodes[7].style.animation = ""; divkeyboard.childNodes[4].childNodes[7].style.background = 'black';}
-        if(str=='ArrowRight'){divkeyboard.childNodes[4].childNodes[8].style.animation = ""; divkeyboard.childNodes[4].childNodes[8].style.background = 'black';}
-        if(str=='Meta'){divkeyboard.childNodes[4].childNodes[1].style.animation = ""; divkeyboard.childNodes[4].childNodes[1].style.background = 'black';}
+        if(str=='ArrowUp'){
+            setTimeout(() => {
+                divkeyboard.childNodes[3].childNodes[11].style.animation = ""; divkeyboard.childNodes[3].childNodes[11].style.background = 'black';
+            }, 1000);
+            }
+            if(str=='ArrowLeft'){
+                setTimeout(() => {
+                    divkeyboard.childNodes[3].childNodes[11].style.animation = ""; divkeyboard.childNodes[3].childNodes[11].style.background = 'black';
+                }, 1000);
+                }
+                if(str=='ArrowDown'){
+                    setTimeout(() => {
+                        divkeyboard.childNodes[3].childNodes[11].style.animation = ""; divkeyboard.childNodes[3].childNodes[11].style.background = 'black';
+                    }, 1000);
+                    }
+                    if(str=='ArrowRight'){
+                        setTimeout(() => {
+                            divkeyboard.childNodes[3].childNodes[11].style.animation = ""; divkeyboard.childNodes[3].childNodes[11].style.background = 'black';
+                        }, 1000);
+                        }
+                        if(str=='Meta'){
+                            setTimeout(() => {
+                                divkeyboard.childNodes[3].childNodes[11].style.animation = ""; divkeyboard.childNodes[3].childNodes[11].style.background = 'black';
+                            }, 1000);
+                            }
   }
   
