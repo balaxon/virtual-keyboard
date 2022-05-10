@@ -1,0 +1,79 @@
+@font-face{
+    font-family: Georgia;
+    src: url(/src/assets/georgia.ttf);
+}
+body{
+    width: 1280px;
+    margin: auto;
+    grid-template-rows: 150px 330px 100px;
+    display: grid;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    text-align: center;
+    vertical-align: middle;
+    /* line-height: 100%; */
+
+}
+.textarea{
+    margin: auto;
+    display: block;
+    margin-top: 25px;
+    width: 700px;
+    height: 100px;
+}
+.divkeyboard{
+    display: grid;
+    margin: auto;
+    height: 300px;
+    width: 700px;
+    /* background: black; */
+    grid-template-rows: repeat(5,40px);
+    row-gap: 25px;
+}
+.span{
+    margin: auto;
+    text-align: center;
+}
+.divkeyrow{
+    display: grid;
+    grid-template-columns: repeat(13,38px) 145px;
+    column-gap: 5px;
+}
+.divkeyrow2{
+    display: grid;
+    grid-template-columns: 60px repeat(13,38px) 80px;
+    column-gap: 5px;
+}
+.divkeyrow3{
+    display: grid;
+    grid-template-columns: 120px repeat(11,38px) 105px;
+    column-gap: 5px;
+}
+.divkeyrow4{
+    display: grid;
+    grid-template-columns: 115px repeat(11,38px) 110px ;
+    column-gap: 5px;
+}
+.divkeyrow5{
+    display: grid;
+    grid-template-columns: 100px 40px 45px 213px 100px 45px 40px 40px 40px;
+    column-gap: 5px;
+}
+.divkeyrowkeys{
+    background: black;
+    color: white;
+    display: block;
+}
+.divkeyrowkeys:hover{
+    cursor: pointer;
+}
+@keyframes ch {
+    from {
+      background-color: blue;
+    }
+    to {
+      background-color: black;
+    }
+  }
