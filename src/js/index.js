@@ -17,7 +17,7 @@ let divkeyboard = createContainer('div','divkeyboard');
 body.append(divkeyboard);
 let span = document.createElement('span');
 span.classList.add('span');
-span.textContent = "To change keybord, use shift+alt; Keyboard write on windows."
+span.textContent = "To change keybord, use leftshift+leftalt; Keyboard write on windows."
 body.append(span);
 html.onkeydown=function handle(e) {
     textarea.focus();
@@ -184,7 +184,7 @@ function runOnKeys(func, ...codes) {
     let pressed = new Set();
 
     document.addEventListener('keydown', function(event) {
-      pressed.add(event.key);
+      pressed.add(event.code);
       for (let key of codes) { 
         if (!pressed.has(key)) {
           return;
@@ -195,15 +195,15 @@ function runOnKeys(func, ...codes) {
     });
 
     document.addEventListener('keyup', function(event) {
-      pressed.delete(event.key);
+      pressed.delete(event.code);
     });
 
   }
 
   runOnKeys(
     () => alert('hi'),
-    "Shift",
-    "Alt"
+    "ShiftLeft",
+    "AltLeft"
   );
   function addback(str){
         for(let j=0;j<bigcapsru.length;j++){
