@@ -86,6 +86,7 @@ for(let i=0;i<smallen[j].length;i++){
     divkeyboard.childNodes[j].append(divkeyrowkey);
     divkeyrowkey.onclick = function(event) {
         divkeyrowkey.style.animation = "ch 1s ease-in";
+        divkeyrowkey.style.background = "blue";
         if(divkeyrowkey.textContent == 'Enter'){textarea.value+='\n'}
         if(divkeyrowkey.textContent == 'Tab'){textarea.value+='\t'}
         if(divkeyrowkey.textContent == 'CapsLock'){
@@ -99,7 +100,10 @@ for(let i=0;i<smallen[j].length;i++){
         if(divkeyrowkey.textContent == 'Backspace'){}
         if(!(divkeyrowkey.textContent == 'Enter' || divkeyrowkey.textContent == 'Tab' || divkeyrowkey.textContent == 'CapsLock' || divkeyrowkey.textContent == 'Shift' || divkeyrowkey.textContent == 'Control'|| divkeyrowkey.textContent == 'Meta'||divkeyrowkey.textContent == 'Alt'||divkeyrowkey.textContent == 'Delete'||divkeyrowkey.textContent == 'Backspace')){textarea.value+=divkeyrowkey.textContent;}
         
-
+            setTimeout(() => {
+                divkeyrowkey.style.background = "black";
+                divkeyrowkey.style.animation = "";
+            }, 1000);
       }
     divkeyrowkey.textContent = smallen[j][i];
     if(smallen[j][i]=='ArrowUp'){divkeyrowkey.textContent = '↑';}
